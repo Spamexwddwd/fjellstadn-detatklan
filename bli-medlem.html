@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Bli Medlem | Fjellstad</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        input, select, textarea {
+            width: 100%; padding: 15px; margin-bottom: 20px;
+            border: 2px solid #eee; border-radius: 15px; font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="main-card">
+            <header>
+                <a href="index.html" class="logo">FJELLSTAD.</a>
+                <nav>
+                    <a href="index.html">Hjem</a>
+                    <a href="om-oss.html">Om oss</a>
+                    <a href="etater.html">Etater</a>
+                    <a href="oppdateringer.html">Oppdateringer</a>
+                    <a href="bli-medlem.html" class="active">Bli medlem</a>
+                </nav>
+            </header>
+            <h1>Søk Medlemskap</h1>
+            <form style="max-width: 600px;">
+                <label>Fullt Navn / Steam Navn</label>
+                <input type="text" placeholder="Ditt navn...">
+                <label>Hvilken etat søker du til?</label>
+                <select>
+                    <option>Politiet</option>
+                    <option>Ambulanse / Sykehus</option>
+                    <option>Brannvesen</option>
+                </select>
+                <label>Hvorfor velge deg?</label>
+                <textarea rows="4" placeholder="Fortell litt om deg selv..."></textarea>
+                <button type="submit" class="btn">Send Søknad</button>
+            </form>
+        </div>
+        <footer>© Fjellstad Nødetat Klan 2025-2026</footer>
+    </div>
+</body>
+</html>
