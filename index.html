@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fjellstad Nødetat Klan | Hjem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --accent: #0984e3;
+            --radius: 30px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section - Full Height */
+        .hero-viewport {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background: var(--card-bg);
+            padding: 60px;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .logo { font-weight: 800; font-size: 1.8rem; color: var(--accent); letter-spacing: -1px; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+
+        nav a:hover { opacity: 1; color: var(--accent); }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 { font-size: 4rem; line-height: 1; margin: 0 0 20px 0; }
+        .hero-text p { font-size: 1.2rem; opacity: 0.6; margin-bottom: 40px; }
+
+        .cta-button {
+            background: var(--text-main);
+            color: white;
+            padding: 20px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover { transform: translateY(-5px); background: var(--accent); }
+
+        /* Scroll Icon Animation */
+        .scroll-icon {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 50px;
+            border: 2px solid var(--text-main);
+            border-radius: 20px;
+            opacity: 0.3;
+        }
+
+        .scroll-icon::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 4px;
+            height: 8px;
+            background: var(--text-main);
+            margin-left: -2px;
+            border-radius: 2px;
+            animation: scroll-anim 2s infinite;
+        }
+
+        @keyframes scroll-anim {
+            0% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(15px); }
+        }
+
+        /* Second Section (Content) */
+        .content-section {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 40px;
+            text-align: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        footer {
+            padding: 60px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-viewport">
+        <div class="container">
+            <header>
+                <div class="logo">FJELLSTAD.</div>
+                <nav>
+                    <a href="om-oss.html">OM OSS</a>
+                    <a href="etater.html">ETATER</a>
+                    <a href="oppdateringer.html">OPPDATERINGER</a>
+                    <a href="bli-medlem.html">BLI MEDLEM</a>
+                </nav>
+            </header>
+
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>Seriøst Rollespill.</h1>
+                    <p>Fjellstad Nødetat Klan er ledende innen realistisk simulering av nødetatene i FiveM. Er du klar for tjeneste?</p>
+                    <a href="bli-medlem.html" class="cta-button">Send Søknad</a>
+                </div>
+                <div style="background: #eee; height: 400px; border-radius: var(--radius); overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80&w=800" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-icon"></div>
+    </section>
+
+    <section class="content-section">
+        <h2>Hvorfor velge oss?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Realisme</h3>
+                <p>Vi bruker ekte prosedyrer og taktikk for å skape en unik opplevelse.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Samhold</h3>
+                <p>Et sterkt fellesskap som støtter hverandre både i og utfor tjeneste.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Utvikling</h3>
+                <p>Mulighet for karriereveier innen flere ulike avdelinger og spesialiteter.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; Fjellstad Nødetat Klan 2025-2026
+    </footer>
+
+</body>
+</html>
