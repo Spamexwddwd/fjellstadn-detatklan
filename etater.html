@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <style>
+        /* Use the same CSS as index.html */
+        /* Change the Hero Section to show 3 columns for departments */
+        .etater-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .etat-box {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">FJELLSTAD.</div>
+            <nav>
+                <a href="index.html">HJEM</a>
+                <a href="om-oss.html">OM OSS</a>
+                <a href="oppdateringer.html">OPPDATERINGER</a>
+                <a href="bli-medlem.html">BLI MEDLEM</a>
+            </nav>
+        </header>
+        <h1>Våre Etater</h1>
+        <div class="etater-grid">
+            <div class="etat-box"><h2>Politi</h2><p>Orden og sikkerhet.</p></div>
+            <div class="etat-box"><h2>Ambulanse</h2><p>Livreddende hjelp.</p></div>
+            <div class="etat-box"><h2>Brann</h2><p>Beredskap og redning.</p></div>
+        </div>
+    </div>
+</body>
+</html>
