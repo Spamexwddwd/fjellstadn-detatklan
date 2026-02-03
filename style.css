@@ -1,0 +1,130 @@
+:root {
+    --bg: #f0f2f5;
+    --card: #ffffff;
+    --text: #1e272e;
+    --accent: #0984e3;
+    --accent-hover: #74b9ff;
+    --radius: 30px;
+    --shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Layout Container */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.main-card {
+    width: 100%;
+    max-width: 1200px;
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 60px;
+    box-shadow: var(--shadow);
+    min-height: 80vh;
+    position: relative;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--accent);
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+nav { display: flex; gap: 30px; }
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active { opacity: 1; color: var(--accent); }
+
+/* Typography */
+h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
+p { font-size: 1.1rem; opacity: 0.7; margin-bottom: 30px; }
+
+/* Buttons */
+.btn {
+    background: var(--text);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover { transform: translateY(-3px); background: var(--accent); box-shadow: 0 10px 20px rgba(9, 132, 227, 0.2); }
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.5;
+    padding-bottom: 40px;
+}
+
+/* Scroll Mouse Icon */
+.mouse-scroll {
+    width: 26px;
+    height: 42px;
+    border: 2px solid var(--text);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -13px;
+    opacity: 0.3;
+}
+
+.mouse-scroll::after {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: var(--text);
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+    animation: scrollMove 2s infinite;
+}
+
+@keyframes scrollMove {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0; }
+}
